@@ -4,6 +4,7 @@ from const_se import *
 from const_pmc import *
 from const_clkrst import *
 from const_mc import *
+from const_emc import *
 
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/t210.h
 #http://switchbrew.org/index.php?title=Memory_layout
@@ -33,6 +34,11 @@ def add_segments():
             "name" : "MC",
             "base": 0x70019000,
             "size": 0x1000
+        },
+        {
+            "name": "EMC",
+            "base": 0x7001B000,
+            "size": 0x1000
         }
     ]
 
@@ -54,7 +60,8 @@ def add_segments():
             print("Segment {} exists, skipping").format(name)
 
 def add_defines():
-    process_array = [tsec_values, se_values, pmc_values, clkrst_values, mc_values]
+    process_array = [tsec_values, se_values, pmc_values, clkrst_values, \
+                    mc_values, emc_values]
 
     for pa in process_array:
         for name in pa:
