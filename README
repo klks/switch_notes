@@ -1,0 +1,10 @@
+My notes while I learn my way around this new hardware
+
+Reading References
+http://switchbrew.org/index.php
+http://switchbrew.org/index.php?title=Memory_layout
+http://switchbrew.org/index.php?title=TSEC
+http://switchbrew.org/index.php?title=Security_Engine
+http://switchbrew.org/index.php?title=SVC
+
+https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/
