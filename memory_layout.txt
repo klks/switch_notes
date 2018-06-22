@@ -2,21 +2,6 @@ Memory Layout (http://switchbrew.org/index.php?title=Memory_layout)
 
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/t210.h
 
-0x50000000 - HOST1X
-0x54200000 - Unknown
-0x54201000 - Display_A
-0x54300000 - Unknown
-0x54501000 - TSEC (http://switchbrew.org/index.php?title=TSEC)
-0x60005000 - Unknown
-0x60006000 - Clock & Reset
-0x6000D000 - Unknown
-0x70003000 - Unknown
-0x7000E000 - PMC
-0x70012000 - Security Engine (http://switchbrew.org/index.php?title=Security_Engine)
-0x70019000 - MC_IRAM (https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/mc.h)
-0x7001B000 - Unknown
-0x7D000000 - Unknown
-
 SXOS Related
 ~~~~~~~~~~~~~
 0x40007800 - Copy code stub from Payload.bin
