@@ -1,5 +1,8 @@
 mipi_cal_values = {
-"base"                        : 0x700e3000,
+"name"          : "MIPI_CAL",
+"base"          : 0x700e3000,
+"size"          : 0x1000,
+
 "MIPI_CAL_0x0"                : 0x0,
 "MIPI_CAL_0x4"                : 0x4,
 "MIPI_CAL_0x8"                : 0x8,

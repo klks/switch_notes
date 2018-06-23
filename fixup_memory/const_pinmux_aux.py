@@ -1,5 +1,8 @@
 pinmux_aux_values = {
-"base"                        : 0x70003000,
+"name"          : "PINMUX_AUX",
+"base"          : 0x70003000,
+"size"          : 0x1000,
+
 "PINMUX_AUX_0x0"              : 0x0,
 "PINMUX_AUX_0x4"              : 0x4,
 "PINMUX_AUX_0x8"              : 0x8,

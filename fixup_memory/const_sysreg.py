@@ -1,5 +1,8 @@
 sysreg_values = {
-"base"                              : 0x6000C000,
+"name"          : "SYSREG",
+"base"          : 0x6000C000,
+"size"          : 0x1000,
+
 "AHB_ARBITRATION_XBAR_CTRL"         : 0xE0
 }
 

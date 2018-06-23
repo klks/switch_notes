@@ -1,6 +1,9 @@
 #http://switchbrew.org/index.php?title=TSEC
 tsec_values = {
-"base"                              : 0x54500000,
+"name"          : "TSEC",
+"base"          : 0x54500000,
+"size"          : 0x40000,
+
 "TSEC_THI_CTXSW"                    : 0x20,
 "TSEC_THI_METHOD0"                  : 0x40,
 "TSEC_THI_METHOD1"                  : 0x44,

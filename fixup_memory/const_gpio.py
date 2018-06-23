@@ -1,5 +1,8 @@
 gpio_values = {
-"base"              : 0x6000d000,
+"name"          : "GPIO",
+"base"          : 0x6000d000,
+"size"          : 0x1000,
+
 "GPIO_1_0x0"        : 0x0,
 "GPIO_1_0x4"        : 0x4,
 "GPIO_1_0x8"        : 0x8,

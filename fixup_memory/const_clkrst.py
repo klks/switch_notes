@@ -1,6 +1,9 @@
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/clock.h
 clkrst_values = {
-"base"                                      : 0x60006000,
+"name"          : "CLKRST",
+"base"          : 0x60006000,
+"size"          : 0x1000,
+
 "CLK_RST_CONTROLLER_SCLK_BURST_POLICY"      : 0x28,
 "CLK_RST_CONTROLLER_SUPER_SCLK_DIVIDER"     : 0x2C,
 "CLK_RST_CONTROLLER_CLK_SYSTEM_RATE"        : 0x30,
@@ -16,13 +19,28 @@ clkrst_values = {
 "CLK_RST_CONTROLLER_PLLMB_BASE"             : 0x5E8,
 
 #Used by SX OS
-"CLK_RST_0x3B4"                             : 0x3B4,
 "CLK_RST_0x20"                              : 0x20,
-"CLK_RST_0x360"                             : 0x360,
 "CLK_RST_0x24"                              : 0x24,
-"CLK_RST_0x440"                             : 0x440,
-"CLK_RST_0x388"                             : 0x388,
-"CLK_RST_0x518"                             : 0x518,
+"CLK_RST_0x90"                              : 0x90,
+"CLK_RST_0x98"                              : 0x98,
+"CLK_RST_0x9C"                              : 0x9C,
+"CLK_RST_0xD0"                              : 0xD0,
+"CLK_RST_0xD8"                              : 0xD8,
+"CLK_RST_0xDC"                              : 0xDC,
+"CLK_RST_0xE0"                              : 0xE0,
 "CLK_RST_0xE4"                              : 0xE4,
-"CLK_RST_0xE0"                              : 0xE0
+"CLK_RST_0x138"                             : 0x138,
+"CLK_RST_0x304"                             : 0x304,
+"CLK_RST_0x30C"                             : 0x30C,
+"CLK_RST_0x320"                             : 0x320,
+"CLK_RST_0x360"                             : 0x360,
+"CLK_RST_0x388"                             : 0x388,
+"CLK_RST_0x3B4"                             : 0x3B4,
+"CLK_RST_0x440"                             : 0x440,
+"CLK_RST_0x448"                             : 0x448,
+"CLK_RST_0x44C"                             : 0x44C,
+"CLK_RST_0x518"                             : 0x518,
+"CLK_RST_0x620"                             : 0x620,
+"CLK_RST_0x664"                             : 0x664,
+"CLK_RST_0x66C"                             : 0x66C
 }

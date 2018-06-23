@@ -1,6 +1,9 @@
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/emc.h
 emc_values = {
-"base"                                                                   : 0x7001B000,
+"name"          : "EMC",
+"base"          : 0x7001B000,
+"size"          : 0x1000,
+
 "EMC_CONFIG_SAMPLE_DELAY"                                                : 0x5f0,
 "EMC_CFG_UPDATE"                                                         : 0x5f4,
 "EMC_ADR_CFG"                                                            : 0x10,
@@ -639,5 +642,9 @@ emc_values = {
 "EMC_PMACRO_TRAINING_CTRL_1"                                             : 0xcfc,
 "EMC_PMC_SCRATCH1"                                                       : 0x440,
 "EMC_PMC_SCRATCH2"                                                       : 0x444,
-"EMC_PMC_SCRATCH3"                                                       : 0x448
+"EMC_PMC_SCRATCH3"                                                       : 0x448,
+
+#Used by SX OS
+"EMC_0x8"                                                                : 0x8,
+"EMC_0xC"                                                                : 0xC
 }

@@ -1,6 +1,9 @@
 #http://switchbrew.org/index.php?title=Security_Engine
 se_values = {
-"base"                              : 0x70012000,
+"name"          : "SE",
+"base"          : 0x70012000,
+"size"          : 0x2000,
+
 "SE_OPERATION_UNK0"                 : 0x0,
 "SE_OPERATION_UNK1"                 : 0x4,
 "SE_OPERATION"                      : 0x8,

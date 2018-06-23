@@ -1,5 +1,8 @@
 tmr_values = {
-"base"              : 0x60005000,
+"name"          : "TMR",
+"base"          : 0x60005000,
+"size"          : 0x1000,
+
 "TMR_0x0"           : 0x0,
 "TMR_0x4"           : 0x4,
 "TMR_0x8"           : 0x8,

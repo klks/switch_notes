@@ -1,6 +1,9 @@
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/pmc.h
 pmc_values = {
-"base"                              : 0x7000E400,
+"name"          : "PMC",
+"base"          : 0x7000E400,
+"size"          : 0x1000,
+
 "APBDEV_PMC_PWRGATE_TOGGLE"         : 0x30,
 "APBDEV_PMC_PWRGATE_STATUS"         : 0x38,
 "APBDEV_PMC_NO_IOPOWER"             : 0x44,
@@ -20,5 +23,9 @@ pmc_values = {
 "APBDEV_PMC_DDR_CNTRL"              : 0x4E4,
 "APBDEV_PMC_SCRATCH188"             : 0x810,
 "APBDEV_PMC_SCRATCH190"             : 0x818,
-"APBDEV_PMC_SCRATCH200"             : 0x840
+"APBDEV_PMC_SCRATCH200"             : 0x840,
+
+#Used by SX OS
+"APBDEV_PMC_0x1D0"                  : 0x1D0,
+"APBDEV_PMC_0x45C"                  : 0x45C
 }

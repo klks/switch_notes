@@ -12,88 +12,31 @@ from const_gpio import *
 from const_flow_ctrl import *
 from const_exec_vec import *
 from const_sysreg import *
+from const_host1x import *
+from const_sysctr0 import *
+from const_fuse import *
+from const_display_a import *
+from const_dsi import *
+
+process_array = [tsec_values, se_values, pmc_values, clkrst_values, \
+                mc_values, emc_values, tmr_values, mipi_cal_values, \
+                pinmux_aux_values, gpio_values, flow_ctrl_values, \
+                exec_vec_values, sysreg_values, sb_values, host1x_values, \
+                sysctr0_values, fuse_values, display_a_values, dsi_values]
+
+skip_fields = ["name", "base", "size"]
 
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/t210.h
 #http://switchbrew.org/index.php?title=Memory_layout
 def add_segments():
-    segments_to_add = [
-        {
-            "name" : "TSEC",
-            "base": 0x54500000,
-            "size": 0x40000
-        },
-        {
-            "name" : "PMC",
-            "base": 0x7000E000,
-            "size": 0x1000
-        },
-        {
-            "name" : "SE",
-            "base": 0x70012000,
-            "size": 0x2000
-        },
-        {
-            "name" : "CLKRST",
-            "base": 0x60006000,
-            "size": 0x1000
-        },
-        {
-            "name" : "MC",
-            "base": 0x70019000,
-            "size": 0x1000
-        },
-        {
-            "name": "EMC",
-            "base": 0x7001B000,
-            "size": 0x1000
-        },
-        {
-            "name": "DSI",
-            "base": 0x54300000,
-            "size": 0x1000
-        },
-        {
-            "name": "MIPI_CAL",
-            "base": 0x700E3000,
-            "size": 0x1000
-        },
-        {
-            "name": "TMR",
-            "base": 0x60005000,
-            "size": 0x1000
-        },
-        {
-            "name": "PINMUX_AUX",
-            "base": 0x70003000,
-            "size": 0x1000
-        },
-        {
-            "name": "GPIO",
-            "base": 0x6000D000,
-            "size": 0x1000
-        },
-        {
-            "name": "FLOW_CTRL",
-            "base": 0x60007000,
-            "size": 0x1000
-        },
-        {
-            "name": "EXEC_VEC",
-            "base": 0x6000F000,
-            "size": 0x1000
-        },
-        {
-            "name": "SYSREG",
-            "base": 0x6000C000,
-            "size": 0x1000
-        }
-    ]
 
     segments = []
     for start in idautils.Segments():
         segments.append(start)
 
-    for new_segment in segments_to_add:
+    for new_segment in process_array:
+        if "name" not in new_segment or "base" not in new_segment \
+            or "size" not in new_segment: continue
         name = new_segment["name"]
         base = new_segment["base"]
         size = new_segment["size"]
@@ -106,11 +49,7 @@ def add_segments():
             print("Segment {} exists, skipping").format(name)
 
 def add_defines():
-    process_array = [tsec_values, se_values, pmc_values, clkrst_values, \
-                    mc_values, emc_values, tmr_values, mipi_cal_values, \
-                    pinmux_aux_values, gpio_values, flow_ctrl_values, \
-                    exec_vec_values, sysreg_values, sb_values]
-
+    
     for pa in process_array:
         base = 0
         flags = idc.SN_PUBLIC #|idc.SN_NOWARN
@@ -118,7 +57,7 @@ def add_defines():
             base = pa["base"]
 
         for name in pa:
-            if name == "base": continue
+            if name in skip_fields: continue
             if base != 0:
                 idc.set_name(base + pa[name], name, flags)
             else:

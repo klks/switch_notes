@@ -1,6 +1,9 @@
 #https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/fusee-primary/src/hwinit/mc.h
 mc_values = {
-"base"                                                      : 0x70019000,
+"name"          : "MC",
+"base"          : 0x70019000,
+"size"          : 0x1000,
+
 "MC_INTSTATUS"                                              : 0x0,
 "MC_INTMASK"                                                : 0x4,
 "MC_ERR_STATUS"                                             : 0x8,
