@@ -93,6 +93,4 @@ display_a_values = {
 "DC_0x809"                                  : 0x809 * 4,
 "DC_0x80A"                                  : 0x80A * 4,
 "DC_0x80B"                                  : 0x80B * 4
-
-#228FC
 }

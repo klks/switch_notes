@@ -44,5 +44,10 @@ se_values = {
 "SE_RSA_OUTPUT"                     : 0x428,
 "SE_STATUS_FLAGS"                   : 0x800,
 "SE_ERR_STATUS"                     : 0x804,
-"SE_SPARE_0"                        : 0x80C
+"SE_SPARE_0"                        : 0x80C,
+
+#Used by SX OS
+"SE_0x30C"                          : 0x30C,
+"SE_0x310"                          : 0x310,
+"SE_0x314"                          : 0x314
 }
