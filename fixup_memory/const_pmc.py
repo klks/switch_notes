@@ -8,6 +8,7 @@ pmc_values = {
 "APBDEV_PMC_PWRGATE_STATUS"         : 0x38,
 "APBDEV_PMC_NO_IOPOWER"             : 0x44,
 "APBDEV_PMC_SCRATCH20"              : 0xA0,
+"APBDEV_PMC_PWR_DET_VAL"            : 0xE4,
 "APBDEV_PMC_DDR_PWR"                : 0xE8,
 "APBDEV_PMC_CRYPTO_OP"              : 0xF4,
 "APBDEV_PMC_OSC_EDPD_OVER"          : 0x1A4,

@@ -17,12 +17,14 @@ from const_sysctr0 import *
 from const_fuse import *
 from const_display_a import *
 from const_dsi import *
+from const_apb_misc import *
 
 process_array = [tsec_values, se_values, pmc_values, clkrst_values, \
                 mc_values, emc_values, tmr_values, mipi_cal_values, \
                 pinmux_aux_values, gpio_values, flow_ctrl_values, \
                 exec_vec_values, sysreg_values, sb_values, host1x_values, \
-                sysctr0_values, fuse_values, display_a_values, dsi_values]
+                sysctr0_values, fuse_values, display_a_values, dsi_values, \
+                apb_misc_values]
 
 skip_fields = ["name", "base", "size"]
 
